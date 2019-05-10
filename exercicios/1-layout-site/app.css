@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.app-header {
+  background-color: #6bd6ff;
+  color: black;
+
+  padding: 15px 25px;
+}
+
+.app-nav {
+  /* Corrigir o 'margin collapse' dos <a> */
+  display: flex;
+  background-color: black;
+}
+
+.app-nav > a {
+  color: white;
+
+  padding: 10px 15px;
+}
+
+.app-nav > a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.main-content {
+  display: flex;
+  /* flex-direction: row-reverse; */
+}
+
+.main-content > main {
+  flex-grow: 1;
+  /* order: 1; */
+}
+
+.main-content > aside {
+  flex-basis: 350px;
+  background-color: lightgray;
+  order: -1;
+
+  display: flex;
+
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.main-content > aside > section:first-child {
+  margin: auto;
+}
+
+/* Telemóveis */
+@media screen and (max-width: 640px) {
+  .main-content > aside {
+    display: none;
+  }
+  /* .main-content {
+    flex-direction: column;
+  }
+
+  .main-content > aside {
+    order: 0;
+  } */
+}
