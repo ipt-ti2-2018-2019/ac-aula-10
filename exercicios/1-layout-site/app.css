@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+
+  font-family: sans-serif;
+}
+
+#header-container {
+  position: sticky;
+
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#app-header {
+  padding: 15px 25px;
+  background-color: #6b81ff;
+}
+
+#app-links {
+  padding: 15px;
+  background-color: black;
+}
+
+#main-container {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  /* justify-content: space-between; */
+}
+
+#main-container > main {
+  flex-grow: 1;
+  /* order: 1; */
+}
+
+#main-container > aside {
+  flex-basis: 250px;
+  background-color: lightgray;
+  order: -1;
+
+  /* Centrar os anúncios */
+  display: flex;
+  /* Quando flex-direction: row */
+  /* align-items: center; */
+  /* Alternativa */
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ecrãs com <= 640px de largura */
+@media screen and (max-width: 640px) {
+  #main-container > aside {
+    display: none;
+  }
+}
